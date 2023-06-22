@@ -1,0 +1,20 @@
+<div
+  class="{{ block_base_classes }} my-3 group-first:mt-0"
+  data-disable-variance
+  {{ block.shopify_attributes }}
+>
+  <a
+    class="text-theme-basic flex items-center group break-word"
+    href="#Popup-{{ section.id }}-{{ block.id }}"
+    @click.prevent="$store.modals.open('#Popup-{{ section.id }}-{{ block.id }}')"
+    role="button"
+  >
+    {% render 'product-icon',
+      icon: block.settings.icon,
+      classes: 'text-xs mr-3 w-4 h-4 shrink-0 group-hover:fill-scheme-accent'
+    %}
+    <span class="theme-link group-hover:text-scheme-accent">
+      {{- block.settings.link_label | escape | strip -}}
+    </span>
+  </a>
+</div>

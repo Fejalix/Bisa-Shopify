@@ -1,0 +1,171 @@
+<div
+  x-data="ThemeModule_CartItems"
+  data-cart-items
+  class="flex-auto flex flex-col {% unless template == 'cart' %}overflow-hidden overflow-y-auto{% endunless %}"
+>
+  {% if cart != empty %}
+    {%- liquid
+      assign cart_item_grid_container = 'grid-cols-3 gap-2 auto-rows-max'
+
+      if template == 'cart'
+        assign cart_item_grid_container = cart_item_grid_container | append: ' lg:grid-cols-14'
+      endif
+    -%}
+    <form action="{{ routes.cart_url }}" method="post" id="cart">
+      <div class="py-4 flex-auto overflow-hidden overflow-y-auto">
+        {% if template == 'cart' %}
+          <div class="sw-hidden lg:grid {{ cart_item_grid_container }} border-b border-scheme-text items-end pb-5 mb-5">
+            <h1 class="lg:col-span-8 font-heading text-2xl">{{ 'cart.general.title' | t }}</h1>
+            <p class="lg:col-span-3 justify-self-start">{{ 'cart.label.quantity' | t }}</p>
+            <p class="lg:col-span-3 justify-self-end">{{ 'cart.label.total' | t }}</p>
+          </div>
+        {% endif %}
+        <ul :key="cart-items" class="grid grid-cols-1 gap-gutter">
+          {% for item in cart.items %}
+            <li
+              data-cart-item-key="{{ item.key }}"
+              key="CartItem-{{ forloop.index }}-{{ item.key }}"
+              class="grid {{ cart_item_grid_container }} py-4"
+              :class="{ 'opacity-50': locked === $el }"
+            >
+              <div class="col-span-1 {% if template == 'cart' %} lg:col-span-2 lg:max-w-[166px] {% endif %} row-span-2 py-2">
+                <a href="{{ item.url }}" class="block" aria-hidden="true" tabindex="-1">
+                  {{ item | image_url: width: 200 | image_tag: loading: 'lazy', sizes: '(min-width: 48em) 5rem, 3.5rem' }}
+                </a>
+              </div>
+              <div class="p-2 {% if template == 'cart' %} lg:col-span-6 lg:row-span-2 {% endif %}">
+                <div>
+                  <a class="block" href="{{ item.url }}">
+                    <div data-product-title>
+                      <p class="font-heading text-base lg:text-lg leading-5 lg:leading-6 break-word">{{ item.product.title }}</p>
+
+                      {% unless item.product.has_only_default_variant %}
+                        <p class="text-xs mt-1 break-word">{{ item.variant.title }}</p>
+                      {% endunless %}
+                    </div>
+
+                    {% if settings.cart_vendor_enable %}
+                      <p class="text-xs mt-1 break-word">{{ item.vendor }}</p>
+                    {% endif %}
+
+                    {% if item.selling_plan_allocation %}
+                      <p class="text-xs mt-1 break-word">{{ item.selling_plan_allocation.selling_plan.name }}</p>
+                    {% endif %}
+
+                    {% comment %}theme-check-disable LiquidTag{% endcomment %}
+                    {%- assign property_size = item.properties | size -%}
+                    {% comment %}theme-check-enable LiquidTag{% endcomment %}
+                    {% if property_size > 0 %}
+                      {% for p in item.properties %}
+                        {% assign first_character_in_key = p.first | slice: 0 %}
+                        {% unless p.last == blank or first_character_in_key == '_' %}
+                        <p class="text-xs mt-1 break-word">
+                          {{ p.first }}:
+                          {% if p.last contains '/uploads/' %}
+                            <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
+                          {% else %}
+                            {{ p.last }}
+                          {% endif %}
+                        </p>
+                        {% endunless %}
+                      {% endfor %}
+                    {% endif %}
+                  </a>
+                  {%- if item.line_level_discount_allocations != blank or item.unit_price_measurement -%}
+                    <div {% if template == 'cart' %} class="lg:mb-1" {% endif %}>
+                      {%- if item.line_level_discount_allocations != blank -%}
+                        <ul class="text-xs text-scheme-accent" aria-label="{{ 'customer.order.discount' | t }}">
+                          {%- for discount_allocation in item.line_level_discount_allocations -%}
+                            <li class="order-discount__item mt-1 break-word">
+                              {{ discount_allocation.discount_application.title }} {% if discount_allocation.amount > 0 %}(-{{ discount_allocation.amount | money }}){% endif %}
+                            </li>
+                          {%- endfor -%}
+                        </ul>
+                      {%- endif -%}
+                      {%- if item.unit_price_measurement -%}
+                        <div class="text-xs mt-1 {% if item.original_price != item.final_price %} text-scheme-accent {% else %} text-scheme-meta {% endif %}">
+                          {{ item.unit_price | money }} /&nbsp;
+                          {%- if item.unit_price_measurement.reference_value != 1 -%}
+                            {{- item.unit_price_measurement.reference_value -}}
+                          {%- endif -%}
+                          {{ item.unit_price_measurement.reference_unit }}
+                        </div>
+                      {%- endif -%}
+                    </div>
+                  {%- endif -%}
+                </div>
+                <div class="hidden {% if template == 'cart' %} lg:block {% endif %}">
+                  <p class="text-xs {% if template == 'cart' %} lg:mt-3 {% endif %}">
+                    <a class="hover:text-scheme-accent" href="{{ item.url_to_remove }}" @click.prevent="remove()">
+                      {{ 'cart.general.remove' | t: product: item.title }}
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="col-span-2 {% if template == 'cart' %} lg:col-span-3 lg:row-span-2 {% endif %}">
+                <div class="ml-[0.1rem] {% if template == 'cart' %} lg:flex lg:justify-start lg:ml-0 {% endif %}">
+                  <label class="sr-only" for="updates_{{ item.key }}">{{ 'cart.label.quantity' | t }}:</label>
+                  <div class="max-w-min flex flex-nowrap justify-center items-center">
+                    <button
+                      class="w-8 self-stretch"
+                      aria-label="&minus;"
+                      @click.prevent.stop="decrement()"
+                    >
+                      <div class="w-5 h-5 m-auto">{% render 'icon-minus' %}</div>
+                    </button>
+                    <input
+                      type="number"
+                      class="text-center border-0 w-20"
+                      name="updates[]"
+                      id="updates_{{ item.key }}"
+                      value="{{ item.quantity }}"
+                      size="4"
+                      data-last-value="{{ item.quantity }}"
+                      @change="itemQuantityChange()"
+                      @keyup.debounce.750ms="$dispatch('change')"
+                    >
+                    <button
+                      class="w-8 self-stretch"
+                      aria-label="&plus;"
+                      @click.prevent.stop="increment()"
+                    >
+                      <div class="w-5 h-5 m-auto">{% render 'icon-plus' %}</div>
+                    </button>
+                  </div>
+                </div>
+                <div class="mt-2 p-2 {% if template == 'cart' %} lg:hidden {% endif %}">
+                  <p class="text-xs">
+                    <a class="hover:text-scheme-accent" href="{{ item.url_to_remove }} break-word" @click.prevent="remove()">
+                      {{ 'cart.general.remove' | t: product: item.title }}
+                    </a>
+                  </p>
+                </div>
+                <div
+                  class="cart-item__error text-scheme-accent text-xs hidden"
+                  id="Line-item-error-{{ item.key }}"
+                  role="alert"
+                  data-item-title="{{ item.title | escape }}"
+                  data-cart-quantity-error
+                >
+                </div>
+              </div>
+              <div class="col-start-3 row-start-1 {% if template == 'cart' %}  lg:col-span-3 lg:row-span-2 {% endif %} text-right p-2">
+                {%- if item.original_line_price != item.final_line_price -%}
+                  <del class="block">{{ item.original_line_price | money }}</del>
+                  <span class="block text-scheme-accent">{{ item.final_line_price | money }}</span>
+                {%- else -%}
+                  {{ item.original_line_price | money }}
+                {%- endif -%}
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </form>
+  {% else %}
+    <div class="py-section text-center">
+      <p>{{ 'cart.general.empty' | t }}</p>
+    </div>
+  {% endif %}
+</div>
+<p class="sr-only" id="cart-live-region-text" aria-live="polite" role="status" aria-hidden="true">{{ 'cart.general.new_subtotal' | t }}: {{ cart.total_price | money_with_currency }}</p>

@@ -1,0 +1,62 @@
+<div
+  x-data="ThemeModule_CartFooter"
+  data-cart-footer
+>
+  {% if cart != empty %}
+    <div class="border-t border-scheme-text pt-10">
+      <div class="grid grid-cols-14 gap-2  {% if template == 'cart' %} pb-section max-w-5xl mx-auto {% endif %}">
+        {% if settings.cart_notes_enable %}
+          <div class="row-start-2 {% if template == 'cart' %} md:row-auto {% endif %} col-span-14 {% if template == 'cart' %} md:col-span-8 {% endif %} my-2 {% if template == 'cart' %} md:my-0 {% endif %}">
+            <label class="block" for="CartSpecialInstructions">{{ 'cart.general.note' | t }}</label>
+            <textarea
+              name="note"
+              id="CartSpecialInstructions"
+              class="block mt-1 mb-2 p-2 w-full border border-scheme-text bg-scheme-background text-scheme-text transition-opacity"
+              :class="{ 'opacity-50 cursor-progress' : updating }"
+              :disabled="updating"
+              x-data="ThemeModule_CartNote"
+              @change="updateNote"
+              @keyup.debounce.750ms="$dispatch('change')"
+            >
+              {{- cart.note -}}
+            </textarea>
+          </div>
+        {% endif %}
+        <div class="col-span-14 {% if template == 'cart' %} md:col-span-6 md:col-end-last {% endif %}">
+          <dl class="grid grid-cols-2 {% if template == 'cart' %} md:grid-cols-5 {% endif %} text-right items-center">
+            {%- for discount_application in cart.cart_level_discount_applications -%}
+              <dt class="text-scheme-accent {% if template == 'cart' %} md:col-span-3 {% endif %}">
+                <span class="sr-only">{{ 'customer.order.discount' | t }}:</span><span>{{- discount_application.title -}}</span>
+              </dt>
+              <dd class="text-scheme-accent {% if template == 'cart' %} md:col-span-2 {% endif %}">
+                -{{ discount_application.total_allocated_amount | money }}
+              </dd>
+            {%- endfor -%}
+            <dt class="{% if template == 'cart' %} md:col-span-3 {% endif %} text-left">{{ 'cart.general.subtotal' | t }}</dt>
+            <dd class="{% if template == 'cart' %} md:col-span-2 {% endif %}">{{ cart.total_price | money }}</dd>
+          </dl>
+          <p class="mt-4 text-right text-sm">
+            {%- if cart.taxes_included -%}
+              {{ 'cart.general.taxes_included_but_shipping_at_checkout' | t }}
+            {%- else -%}
+              {{ 'cart.general.shipping_at_checkout' | t }}
+            {%- endif -%}
+          </p>
+        </div>
+        <div class="col-span-14 row-start-3 {% if template == 'cart' %} md:row-start-2 md:col-span-6 md:col-end-last {% endif %}">
+          <div class="ml-auto">
+            <div class="flex justify-end -mx-3">
+              <button class="no-js block mx-3 theme-button" type="submit" name="update" form="cart">
+                {{ 'cart.general.update' | t }}
+              </button>
+              <button class="block mx-3 theme-button theme-button--solid {% unless template == 'cart' %}grow{% endunless %}" type="submit" name="checkout" form="cart">
+                {{ 'cart.general.checkout' | t }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-scheme-accent" id="cart-errors"></div>
+    </div>
+  {% endif %}
+</div>

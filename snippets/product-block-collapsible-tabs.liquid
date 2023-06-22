@@ -1,0 +1,61 @@
+<div
+  class="{{ block_base_classes }} min-w-[15rem] my-4 group-first:mt-0 w-full"
+  data-disable-variance
+  {{ block.shopify_attributes }}
+>
+  {% for i in (1..3) %}
+    {% liquid
+      if i > 1
+        assign enable_setting = 'enable_' | append: i
+
+        unless block.settings[enable_setting]
+          continue
+        endunless
+      endif
+
+      assign icon_setting = 'icon_' | append: i
+      assign heading_setting = 'heading_' | append: i
+      assign content_setting = 'content_' | append: i
+      assign page_setting = 'page_' | append: i
+
+      assign icon = block.settings[icon_setting]
+      assign heading = block.settings[heading_setting]
+      assign content = block.settings[content_setting]
+      assign page  = block.settings[page_setting]
+
+      if heading == blank
+        continue
+      endif
+    %}
+    <details
+      class="py-2 {% unless forloop.first %} border-t border-scheme-text {% endunless %}"
+      x-data="{ open: false }"
+      @toggle="open = $root.open"
+    >
+      <summary>
+        <div class="text-theme-basic flex justify-between items-center">
+          <h2 class="text-theme-basic flex items-center break-word">
+            {% render 'product-icon',
+              icon: icon,
+              classes: 'text-xs mr-3 w-4 h-4 shrink-0'
+            %}
+            {{- heading | default: page.title | escape | strip -}}
+          </h2>
+          <div class="ml-auto flex">
+            <span class="inline-block m-auto ml-2 w-4 h-4 shrink-0" :class="{ 'hidden' : open === false }">
+              {% render 'icon-chevron-up' %}
+            </span>
+            <span class="inline-block m-auto ml-2 w-4 h-4 shrink-0" :class="{ 'hidden' : open }">
+              {% render 'icon-chevron-down' %}
+            </span>
+          </div>
+        </div>
+      </summary>
+      <div class="text-xs my-5">
+        {{ content }}
+        {{ page.content }}
+      </div>
+    </details>
+  {% endfor %}
+</div>
+

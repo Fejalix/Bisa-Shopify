@@ -1,0 +1,245 @@
+{%- if predictive_search.performed -%}
+  {%- liquid
+    assign crop = settings.predictive_search_crop
+
+    assign has_product_results = false
+    assign has_collection_results = false
+    assign has_article_results = false
+    assign has_page_results = false
+
+    if predictive_search.resources.products.size > 0
+      assign has_product_results = true
+    endif
+
+    if predictive_search.resources.collections.size > 0
+      assign has_collection_results = true
+    endif
+
+    if predictive_search.resources.articles.size > 0
+      assign has_article_results = true
+    endif
+
+    if predictive_search.resources.pages.size > 0
+      assign has_page_results = true
+    endif
+
+    assign group_results = false
+    assign has_results = false
+
+    if has_product_results
+      assign has_results = true
+    endif
+
+    if has_collection_results or has_article_results or has_page_results
+      assign has_results = true
+      assign group_results = true
+    endif
+
+    comment
+      TODO: Make sizes more precise once design is finalized
+    endcomment
+
+    assign sizes = '200px'
+  -%}
+
+  <div id="predictive-search-results">
+    {% if group_results %}
+      <nav class="mt-3">
+        <fieldset class="w-full flex -mx-2" x-ref="groupToggles">
+          {% if has_product_results %}
+            <div class="relative mx-2">
+              <input class="absolute top-0 left-0 w-full h-full opacity-0 peer" type="radio" id="predictive-search-results-group-products" name="predictive-search-results-group" value="products" x-model="currentResultsGroup">
+              <label
+                for="predictive-search-results-group-products"
+                class="cursor-pointer relative block opacity-30 peer-checked:opacity-100 transition-opacity"
+              >
+                {{ 'general.search.products' | t }}
+                ({{ predictive_search.resources.products.size }})
+              </label>
+            </div>
+          {% endif %}
+
+          {% if has_collection_results %}
+            <div class="relative mx-2">
+              <input class="absolute top-0 left-0 w-full h-full opacity-0 peer" type="radio" id="predictive-search-results-group-collections" name="predictive-search-results-group" value="collections" x-model="currentResultsGroup">
+              <label
+                for="predictive-search-results-group-collections"
+                class="cursor-pointer relative block opacity-30 peer-checked:opacity-100 transition-opacity"
+              >
+                {{ 'general.search.collections' | t }}
+                ({{ predictive_search.resources.collections.size }})
+              </label>
+            </div>
+          {% endif %}
+
+          {% if has_article_results %}
+            <div class="relative mx-2">
+              <input class="absolute top-0 left-0 w-full h-full opacity-0 peer" type="radio" id="predictive-search-results-group-articles" name="predictive-search-results-group" value="articles" x-model="currentResultsGroup">
+              <label
+                for="predictive-search-results-group-articles"
+                class="cursor-pointer relative block opacity-30 peer-checked:opacity-100 transition-opacity"
+              >
+                {{ 'general.search.articles' | t }}
+                ({{ predictive_search.resources.articles.size }})
+              </label>
+            </div>
+          {% endif %}
+
+          {% if has_page_results %}
+            <div class="relative mx-2">
+              <input class="absolute top-0 left-0 w-full h-full opacity-0 peer" type="radio" id="predictive-search-results-group-pages" name="predictive-search-results-group" value="pages" x-model="currentResultsGroup">
+              <label
+                for="predictive-search-results-group-pages"
+                class="cursor-pointer relative block opacity-30 peer-checked:opacity-100 transition-opacity"
+              >
+                {{ 'general.search.pages' | t }}
+                ({{ predictive_search.resources.pages.size }})
+              </label>
+            </div>
+          {% endif %}
+        </fieldset>
+      </nav>
+    {% endif %}
+
+    <div class="relative overflow-hidden">
+      {% if has_product_results %}
+        <div
+          x-ref="productsResults"
+          hidden
+        >
+          <ul
+            id="predictive-search-results-list"
+            class="mt-5 grid grid-cols-3 gap-5"
+            role="listbox"
+            aria-labelledby="predictive-search-products"
+          >
+            {%- for product in predictive_search.resources.products -%}
+              <li
+                id="predictive-search-option-{{ forloop.index }}"
+                class="relative"
+                role="option"
+                aria-selected="false"
+              >
+                {% render 'showcase-tile', object: product, crop: crop, style: 'grid' %}
+              </li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      {% endif %}
+
+      {% if has_collection_results %}
+        <div
+          x-ref="collectionsResults"
+          hidden
+        >
+          <ul
+            id="predictive-search-results-list"
+            class="mt-5 grid grid-cols-2 gap-5"
+            role="listbox"
+          >
+            {%- for collection in predictive_search.resources.collections -%}
+              {%- assign image = collection.image | default: collection.products.first.featured_image -%}
+              <li
+                id="predictive-search-option-{{ forloop.index }}"
+                role="option"
+                aria-selected="false"
+              >
+                <a href="{{ collection.url }}">
+                  {%- if image != blank -%}
+                    <div class="image-wrapper image-wrapper-{{ crop | default: 'none' }}">
+                      {{ image | image_url: width: 700 | image_tag: sizes: sizes }}
+                    </div>
+                  {%- endif -%}
+                  <div class="mt-2 text-center">
+                    <h3 class="text-sm break-word">
+                      {{ collection.title }}
+                    </h3>
+                  </div>
+                </a>
+              </li>
+              {%- endfor -%}
+          </ul>
+        </div>
+      {% endif %}
+
+      {% if has_article_results %}
+        <div
+          x-ref="articlesResults"
+          hidden
+        >
+          <ul
+            id="predictive-search-results-list"
+            class="mt-5"
+            role="listbox"
+          >
+            {%- for article in predictive_search.resources.articles -%}
+              <li
+                id="predictive-search-option-{{ forloop.index }}"
+                class="py-2"
+                role="option"
+                aria-selected="false"
+              >
+                <a class="grid grid-cols-7 gap-5" href="{{ article.url }}">
+                  {%- if article.image != blank -%}
+                    <div class="image-wrapper image-wrapper-{{ crop | default: 'none' }} col-span-2">
+                      {{ article.image | image_url: width: 700 | image_tag: sizes: sizes }}
+                    </div>
+                  {%- endif -%}
+                  <div class="col-span-5 text-left flex">
+                    <h3 class="text-theme-base break-word my-auto">
+                      {{ article.title }}
+                    </h3>
+                  </div>
+                </a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      {% endif %}
+
+      {% if has_page_results %}
+        <div
+          x-ref="pagesResults"
+          hidden
+        >
+          <ul
+            id="predictive-search-results-list"
+            class="mt-5 grid gap-5 lg:gap-10"
+            role="listbox"
+          >
+            {%- for page in predictive_search.resources.pages -%}
+              <li
+                id="predictive-search-option-{{ forloop.index }}"
+                class="py-2"
+                role="option"
+                aria-selected="false"
+              >
+                <a href="{{ page.url }}">
+                  <div class="mt-2 text-left">
+                    <h3 class="text-theme-base break-word">
+                      {{ page.title }}
+                    </h3>
+                  </div>
+                </a>
+              </li>
+              {%- endfor -%}
+          </ul>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  {%- unless has_results -%}
+    <div class="py-section text-center">
+      <p>{{ 'general.search.no_results' | t: terms: predictive_search.terms }}</p>
+    </div>
+  {%- endunless -%}
+
+  <span class="hidden" id="predictive-search-count">
+    {%- if search.results_count == 0 -%}
+      {{- 'general.search.no_results' | t: terms: predictive_search.terms -}}
+    {%- else -%}
+      {{- 'general.search.results_with_count' | t: terms: predictive_search.terms, count: predictive_search.resources.products.size -}}
+    {%- endif -%}
+  </span>
+{%- endif -%}
