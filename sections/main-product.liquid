@@ -323,7 +323,7 @@
     {% comment %}
       Cascading content
     {% endcomment %}
-    <div style="margin-top: 0;" class="px-5 md:px-0 {% if desktop_layout == 'full_width' %}col-span-full{% else %}col-span-2{% endif %} {% if desktop_layout == 'product_form_right' %} col-start-1 row-start-1 {% endif %} text-scheme-text bg-scheme-background pt-0 pb-section md:py-section md:min-h-full cascade-block-container">
+    <div style="margin-top: 0; padding-top: 0;" class="px-5 md:px-0 {% if desktop_layout == 'full_width' %}col-span-full{% else %}col-span-2{% endif %} {% if desktop_layout == 'product_form_right' %} col-start-1 row-start-1 {% endif %} text-scheme-text bg-scheme-background pt-0 pb-section md:py-section md:min-h-full cascade-block-container">
       {%- liquid
         if section.settings.variance == 'global'
           assign variance = settings.variance
