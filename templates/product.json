@@ -1,1 +1,96 @@
-{"sections":{"main":{"type":"main-product","blocks":{"title":{"type":"title","settings":{"text_size":"text-heading-standard"}},"price":{"type":"price","settings":{}},"54c77720-c903-4818-a008-e290b291ed39":{"type":"description","settings":{"section_area":"cascade","truncate_description":false,"full_width":false}},"variant_picker":{"type":"variant_picker","settings":{"option_style":"drop_down","hide_option_labels":true}},"quantity_selector":{"type":"quantity_selector","settings":{"hide_label":false}},"buy_buttons":{"type":"buy_buttons","settings":{"enable_payment_button":true,"show_pickup_availability":true}}},"block_order":["title","price","54c77720-c903-4818-a008-e290b291ed39","variant_picker","quantity_selector","buy_buttons"],"settings":{"desktop_layout":"full_width","desktop_featured_media_width":"half","enable_slideshow":true,"skip_featured_media":true,"cascade_desktop_layout":"two_columns","first_block_position":"left","enable_cascade_on_mobile":true,"spacing":"global","variance":"global","sequence":1,"enable_image_zoom":false,"enable_video_looping":false,"autoplay_videos_on_desktop":true,"color_scheme":"primary"}},"description":{"type":"product-description","disabled":true,"settings":{"color_scheme":"primary","remove_top_padding":true,"remove_bottom_padding":false}},"recommendations":{"type":"product-recommendations","settings":{"product_recommendations_heading":"You may also like","max_products":"3","enable_mobile_carousel":true,"enable_desktop_carousel":false,"color_scheme":"primary"}}},"order":["main","description","recommendations"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "text_size": "text-heading-standard"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "54c77720-c903-4818-a008-e290b291ed39": {
+          "type": "description",
+          "settings": {
+            "section_area": "cascade",
+            "truncate_description": false,
+            "full_width": false
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "option_style": "drop_down",
+            "hide_option_labels": true
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+            "hide_label": false
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "enable_payment_button": true,
+            "show_pickup_availability": true
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "54c77720-c903-4818-a008-e290b291ed39",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons"
+      ],
+      "settings": {
+        "desktop_layout": "full_width",
+        "desktop_featured_media_width": "half",
+        "enable_slideshow": true,
+        "skip_featured_media": false,
+        "cascade_desktop_layout": "two_columns",
+        "first_block_position": "left",
+        "enable_cascade_on_mobile": false,
+        "spacing": "small",
+        "variance": "low",
+        "sequence": 1,
+        "enable_image_zoom": false,
+        "enable_video_looping": false,
+        "autoplay_videos_on_desktop": true,
+        "color_scheme": "primary"
+      }
+    },
+    "description": {
+      "type": "product-description",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "primary",
+        "remove_top_padding": true,
+        "remove_bottom_padding": false
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "max_products": "8",
+        "enable_mobile_carousel": true,
+        "enable_desktop_carousel": true,
+        "color_scheme": "primary"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "description",
+    "recommendations"
+  ]
+}

@@ -61,7 +61,7 @@
                 {% if split %}
                   {% assign video_object_class = video_object_class | append: ' md:h-full md:w-full md:object-cover ' | append: object_fit %}
                 {% endif %}
-                {{ media | video_tag: class: video_object_class, image_size: '2000x', controls: true, autoplay: true, loop: section.settings.enable_video_looping }}
+                {{ media | video_tag: class: video_object_class, image_size: '500x', controls: true, autoplay: true, loop: section.settings.enable_video_looping }}
               {% when 'external_video' %}
                 {% liquid
                   assign video_object_class = video_object_class | append: ' js-' | append: media.host
@@ -85,7 +85,7 @@
             {% if split %}
             {% capture class %}absolute inset-0 w-full h-full {{ object_fit }}{% endcapture %}
             {% endif %}
-            {{ media | image_url: width: 2000 | image_tag: sizes: sizes, preload: preload, class: class, loading: loading }}
+            {{ media | image_url: width: 500 | image_tag: sizes: sizes, preload: preload, class: class, loading: loading }}
           </div>
           <div class="absolute inset-0 w-full h-full transition-opacity duration-500 opacity-0 group-hover:opacity-30">
             <div class="bg-scheme-background w-full h-full"></div>
@@ -111,10 +111,10 @@
         x-intersect.once="_init()"
       >
         <div x-show="!enabled">
-          {{ media | image_url: width: 1000 | image_tag: class: 'absolute inset-0 w-full h-full', loading: 'lazy' }}
+          {{ media | image_url: width: 250 | image_tag: class: 'absolute inset-0 w-full h-full', loading: 'lazy' }}
         </div>
         <template x-if="enabled">
-          {{ media | model_viewer_tag: image_size: '1000x', reveal: 'interaction', toggleable: true, data-model-id: media.id, class: 'absolute inset-0 w-full h-full', background-color: 'white' }}
+          {{ media | model_viewer_tag: image_size: '250x', reveal: 'interaction', toggleable: true, data-model-id: media.id, class: 'absolute inset-0 w-full h-full', background-color: 'white' }}
         </template>
       </div>
 
@@ -128,6 +128,6 @@
       {% if split %}
       {% capture class %}md:h-full md:w-full {{ object_fit }} {% endcapture %}
       {% endif %}
-      {{ media | image_url: width: 2000 | image_tag: sizes: sizes, loading: loading, preload: preload, class: class }}
+      {{ media | image_url: width: 500 | image_tag: sizes: sizes, loading: loading, preload: preload, class: class }}
   {% endcase %}
 </div>

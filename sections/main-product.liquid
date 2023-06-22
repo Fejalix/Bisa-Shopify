@@ -55,7 +55,7 @@
         {% endif %}
         {% render 'media',
            media: featured_media,
-           sizes: '100vw, (min-width: 768px) 50vw',
+           sizes: '100vw, (min-width: 500px) 50vw',
            shown: true,
            always_shown: true,
            loading: 'eager',
@@ -88,7 +88,7 @@
               {% endif %}
               {% render 'media',
                 media: media,
-                sizes: '90vw, (min-width: 768px) 50vw',
+                sizes: '90vw, (min-width: 500px) 50vw',
                 shown: shown,
                 loading: loading,
                 hidden_class: 'hidden'
@@ -148,7 +148,7 @@
                   {% endif %}
                   {% render 'media',
                     media: media,
-                    sizes: '100vw, (min-width: 768px) 50vw',
+                    sizes: '100vw, (min-width: 500px) 50vw',
                     shown: shown,
                     always_shown: true,
                     loading: loading,
@@ -305,13 +305,13 @@
 >
 
 
-  <div class="md:grid md:grid-cols-[1fr_var(--cascade-product-first-col-width)_var(--cascade-product-second-col-width)_1fr]">
+  <div style="max-width: 1800px; margin: 0 auto;" class="md:grid md:grid-cols-[1fr_var(--cascade-product-first-col-width)_var(--cascade-product-second-col-width)_1fr]">
     {% comment %}
       Mobile featured media + product form and column on desktop if enabled
     {% endcomment %}
     <div class="col-span-2 xl:pt-10 text-scheme-text bg-scheme-background md:min-h-full {% if desktop_layout == 'product_form_right' %} col-end-last {% endif %} {% if desktop_layout == 'full_width' %} hidden {% else %} pb-10 md:pb-0 {% endif %}">
-      <div class="md:max-w-[var(--cascade-product-form-width)] {% if desktop_layout == 'product_form_right' %} md:mr-auto {% else %} md:ml-auto {% endif %} md:mt-10 md:sticky md:top-header-height  pt-10 md:pb-10">
-        <div class="md:hidden mb-5 md:mb-10 px-5 pt-[calc(var(--spacing-section)_-_2.5rem)]">
+      <div  class="md:max-w-[var(--cascade-product-form-width)] {% if desktop_layout == 'product_form_right' %} md:mr-auto {% else %} md:ml-auto {% endif %} md:mt-10 md:sticky md:top-header-height  pt-10 md:pb-10">
+        <div  class="md:hidden mb-5 md:mb-10 px-5 pt-[calc(var(--spacing-section)_-_2.5rem)]">
           {{ featured_media_block }}
         </div>
         {% unless desktop_layout == 'full_width' %}
@@ -323,7 +323,7 @@
     {% comment %}
       Cascading content
     {% endcomment %}
-    <div class="px-5 md:px-0 {% if desktop_layout == 'full_width' %}col-span-full{% else %}col-span-2{% endif %} {% if desktop_layout == 'product_form_right' %} col-start-1 row-start-1 {% endif %} text-scheme-text bg-scheme-background pt-0 pb-section md:py-section md:min-h-full cascade-block-container">
+    <div style="margin-top: 0;" class="px-5 md:px-0 {% if desktop_layout == 'full_width' %}col-span-full{% else %}col-span-2{% endif %} {% if desktop_layout == 'product_form_right' %} col-start-1 row-start-1 {% endif %} text-scheme-text bg-scheme-background pt-0 pb-section md:py-section md:min-h-full cascade-block-container">
       {%- liquid
         if section.settings.variance == 'global'
           assign variance = settings.variance
