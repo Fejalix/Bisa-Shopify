@@ -20,6 +20,7 @@
     },
     "main": {
       "type": "main-collection",
+      "disabled": true,
       "settings": {
         "max_products": 12,
         "enable_filtering": true,
@@ -45,8 +46,8 @@
       "settings": {
         "title": "Featured collection",
         "collection": "{{ collection }}",
-        "max_products": "8",
-        "subheading": "<p>Use this text to share information about your collection.<\/p>",
+        "max_products": "40",
+        "subheading": "<p><\/p><p><\/p>",
         "show_collection_link": false,
         "enable_mobile_carousel": true,
         "enable_desktop_carousel": true,

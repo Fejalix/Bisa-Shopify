@@ -18,7 +18,7 @@
   {% endif %}
 >
   {% liquid
-    assign sizes = '75vw (min-width: 768px), 50vw'
+    assign sizes = '35vw (min-width: 390px), 25vw'
   %}
   {% case block.type %}
     {% when 'image' %}
@@ -29,7 +29,7 @@
       {% capture image_content %}
         <div class="mx-auto" data-scale-reveal>
           {% unless image == blank %}
-            {{ image | image_url: width: 2000 | image_tag: loading: 'lazy', sizes: sizes }}
+            {{ image | image_url: width: 500 | image_tag: loading: 'lazy', sizes: sizes }}
           {% else %}
             {%- assign ratios = ' aspect-w-1 aspect-h-1: aspect-w-4 aspect-h-3 : aspect-w-3 aspect-h-4 ' | split: ':' -%}
             {%- assign ratio = index | modulo: 3 -%}
@@ -107,7 +107,7 @@
     {% when 'testimonial' %}
       <div class="mx-auto {{ block.settings.text_align }} {% if enable_cascade_on_mobile %}w-7/8{% endif %} md:w-3/4 lg:w-2/3 text-left my-5 relative" data-disable-variance data-opacity-reveal>
         {% if block.settings.image and block.settings.image_style == 'photo' %}
-          {{ block.settings.image | image_url: width: 600 | image_tag: loading: 'lazy', sizes: '5rem', class: 'inline-block w-[5rem] aspect-1 rounded-full object-cover object-center mb-5' }}
+          {{ block.settings.image | image_url: width: 150 | image_tag: loading: 'lazy', sizes: '5rem', class: 'inline-block w-[5rem] aspect-1 rounded-full object-cover object-center mb-5' }}
         {% endif %}
         <blockquote>
           {%- if block.settings.rating != 'none' -%}
@@ -124,7 +124,7 @@
           {% endif %}
         </blockquote>
         {% if block.settings.image and block.settings.image_style == 'logo' %}
-          {{ block.settings.image | image_url: width: 600 | image_tag: loading: 'lazy', sizes: '4rem', class: 'inline-block max-w-[4rem] h-auto mt-3' }}
+          {{ block.settings.image | image_url: width: 150 | image_tag: loading: 'lazy', sizes: '4rem', class: 'inline-block max-w-[4rem] h-auto mt-3' }}
         {% endif %}
       </div>
     {% when 'video' %}
@@ -157,7 +157,7 @@
       >
         <div data-scale-reveal>
           {% if block.settings.image %}
-            {{ block.settings.image | image_url: width: 1000 | image_tag: class: 'w-full h-full aspect-w-16 aspect-h-9 object-cover', sizes: '50vw', loading: 'lazy' }}
+            {{ block.settings.image | image_url: width: 250 | image_tag: class: 'w-full h-full aspect-w-16 aspect-h-9 object-cover', sizes: '50vw', loading: 'lazy' }}
           {% elsif video_url %}
             {% if video_url.type == 'youtube' %}
               <picture class="w-full h-full aspect-w-16 aspect-h-9 object-cover">

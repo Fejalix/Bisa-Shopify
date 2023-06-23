@@ -7,6 +7,7 @@
         "layout": "default",
         "color_scheme": "primary"
       }
+<<<<<<< HEAD
     },
     "a7bf59d1-599b-488e-b659-e310dac13ddb": {
       "type": "cascade",
@@ -69,3 +70,11 @@
     "a7bf59d1-599b-488e-b659-e310dac13ddb"
   ]
 }
+=======
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
+>>>>>>> Félix
