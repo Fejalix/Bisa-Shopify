@@ -1,1 +1,15 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"color_scheme":"primary"}}},"order":["main"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "layout": "default",
+        "color_scheme": "primary"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
