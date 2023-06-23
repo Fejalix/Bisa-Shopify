@@ -9,17 +9,17 @@
             "text_size": "text-heading-standard"
           }
         },
-        "price": {
-          "type": "price",
-          "settings": {
-          }
-        },
         "54c77720-c903-4818-a008-e290b291ed39": {
           "type": "description",
           "settings": {
-            "section_area": "cascade",
+            "section_area": "form",
             "truncate_description": false,
             "full_width": false
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
           }
         },
         "variant_picker": {
@@ -45,11 +45,14 @@
       },
       "block_order": [
         "title",
-        "price",
         "54c77720-c903-4818-a008-e290b291ed39",
+        "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons"
+      ],
+      "custom_css": [
+
       ],
       "settings": {
         "desktop_layout": "full_width",
