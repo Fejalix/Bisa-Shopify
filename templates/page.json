@@ -7,9 +7,74 @@
         "layout": "default",
         "color_scheme": "primary"
       }
+<<<<<<< HEAD
+    },
+    "a7bf59d1-599b-488e-b659-e310dac13ddb": {
+      "type": "cascade",
+      "blocks": {
+        "22b709e8-3196-4433-8370-ed52c920d144": {
+          "type": "heading_with_text",
+          "settings": {
+            "heading": "COMMUNITY THROUGH SYNERGIES",
+            "rich_text": "<p>Bisa means “can” in Indonesian. It symbolizes possibility, creativity, and freedom of expression.<\/p><p>Bisa Studio is a Maison d’edition and Creative Studio that breaks the linear way of thinking and embraces curiosity. Our mission is to create objects with stories, born from a synergy of shared visions, cultures, histories, traditions and evolutions. Our art is ideas, their beauty is incidental. <\/p><p>We seek diverse people, thoughts, and ideas and collaborate with creatives from around the world to co-design “pièces passionnantes” – pieces with soul. We bring tradition techniques to life in a new form. From a traditional weaver in Turkey to a natural silk dyer in Bali to a multidisciplinary artist in Paris, our strength is in our community. We co-create with fluidity and look past fixed notions and rigid frameworks. We delight in objects evocative of our shared past, a history preserved in wood, clay, iron, or cloth. Traditions restored, traditions created. Pieces that fill our world. <\/p>",
+            "text_align": "text-left",
+            "cta_url": "",
+            "cta_text": "Shop now",
+            "block_width": "half"
+          }
+        },
+        "template--19155428671815__a7bf59d1-599b-488e-b659-e310dac13ddb-1687508054f1159739-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Captura_de_Pantalla_2023-03-13_a_las_16.54.25.png",
+            "url": "",
+            "block_width": "half"
+          }
+        },
+        "template--19155428671815__a7bf59d1-599b-488e-b659-e310dac13ddb-1687508054f1159739-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/000002.jpg",
+            "url": "",
+            "block_width": "half"
+          }
+        }
+      },
+      "block_order": [
+        "22b709e8-3196-4433-8370-ed52c920d144",
+        "template--19155428671815__a7bf59d1-599b-488e-b659-e310dac13ddb-1687508054f1159739-2",
+        "template--19155428671815__a7bf59d1-599b-488e-b659-e310dac13ddb-1687508054f1159739-1"
+      ],
+      "custom_css": [
+        "h3 {font-size: 2.5rem;}"
+      ],
+      "settings": {
+        "title": "",
+        "overlay_heading": false,
+        "desktop_layout": "two_columns",
+        "first_block_position": "left",
+        "enable_cascade_on_mobile": true,
+        "hide_margin": false,
+        "spacing": "global",
+        "variance": "global",
+        "sequence": 1,
+        "color_scheme": "primary",
+        "disable_color_transition": false,
+        "remove_top_padding": false,
+        "remove_bottom_padding": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "a7bf59d1-599b-488e-b659-e310dac13ddb"
+  ]
+}
+=======
     }
   },
   "order": [
     "main"
   ]
 }
+>>>>>>> Félix

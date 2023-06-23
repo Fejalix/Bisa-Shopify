@@ -20,7 +20,7 @@
         "first_product_position": "left",
         "enable_cascade_on_mobile": true,
         "spacing": "medium",
-        "variance": "global",
+        "variance": "medium",
         "sequence": 1,
         "color_scheme": "primary",
         "disable_color_transition": false,
