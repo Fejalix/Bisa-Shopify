@@ -41,6 +41,26 @@
             "enable_payment_button": true,
             "show_pickup_availability": true
           }
+        },
+        "8b120647-02b0-4605-b19d-704cebb0cba4": {
+          "type": "collapsible_tabs",
+          "settings": {
+            "section_area": "cascade",
+            "heading_1": "Dimensions",
+            "content_1": "<p>{{ product.metafields.custom.dimensions | metafield_tag }}<\/p>",
+            "page_1": "",
+            "icon_1": "none",
+            "enable_2": true,
+            "heading_2": "Material",
+            "content_2": "<p>{{ product.metafields.custom.material | metafield_tag }}<\/p>",
+            "page_2": "",
+            "icon_2": "none",
+            "enable_3": false,
+            "heading_3": "Collapsible tab",
+            "content_3": "",
+            "page_3": "",
+            "icon_3": "none"
+          }
         }
       },
       "block_order": [
@@ -49,7 +69,8 @@
         "price",
         "variant_picker",
         "quantity_selector",
-        "buy_buttons"
+        "buy_buttons",
+        "8b120647-02b0-4605-b19d-704cebb0cba4"
       ],
       "custom_css": [
 
