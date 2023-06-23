@@ -45,7 +45,7 @@
         "8b120647-02b0-4605-b19d-704cebb0cba4": {
           "type": "collapsible_tabs",
           "settings": {
-            "section_area": "cascade",
+            "section_area": "form",
             "heading_1": "Dimensions",
             "content_1": "<p>{{ product.metafields.custom.dimensions | metafield_tag }}<\/p>",
             "page_1": "",
