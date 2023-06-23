@@ -26,6 +26,7 @@
   object-fit: cover;
 }
 
+
 @media (max-width: 768px) {
   .container-ab {
     flex-direction: column;
@@ -36,9 +37,9 @@
   }
 }
 
-  }
 </style>
 <section class="section-artist-banner">
+    {% if collection %}
   <div class="container-ab max-site-width px2 px-5 lg--up--px3 lg:px-10">
     <div class="ab-right">
       <h1 class="font-heading text-4xl xl:text-5xl break-word">{{ collection.title }}</h1>
@@ -49,6 +50,18 @@
       <img src="{{ collection.image | img_url: 'master' }}" alt="{{ collection.title }}">
     </div>
   </div>
+  {% else %}
+  <div class=" padding-container container-ab max-site-width px2 px-5 lg--up--px3 lg:px-10">
+    <div class="ab-right">
+      <h1 class="font-heading text-4xl xl:text-5xl break-word">{{ section.settings.heading }}</h1>
+      <div class="ab-description">{{ section.settings.corps-text }}</div>
+
+    </div>
+    <div class="ab-left">
+      <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ collection.settings.title }}">
+    </div>
+  </div>
+  {% endif %}
 </section>
 
 
@@ -64,7 +77,7 @@
         "label": "Heading",
         "default": "Heading"
       }, {
-        "type": "text",
+        "type": "textarea",
         "id": "corps-text",
         "label": "Text",
         "default": "Text"

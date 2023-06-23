@@ -20,7 +20,7 @@
     "section_titles_position": "left_of_content",
     "cascade_fade_in_items": true,
     "variance": "medium",
-    "cascade_item_spacing": "medium",
+    "cascade_item_spacing": "small",
     "max_height_full_width_tiles": "60vh",
     "product_tiles_aspect_ratio": "natural",
     "products_show_badges": true,

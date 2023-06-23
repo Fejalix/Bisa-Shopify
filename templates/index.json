@@ -21,8 +21,20 @@
         "text_color": "color_scheme"
       }
     },
+    "71fc69a8-0281-4c3e-b5c7-924d8a22935e": {
+      "type": "artist-banner",
+      "custom_css": [
+        ".container-ab {margin-top: 90px !important; margin-bottom: 90px !important;}"
+      ],
+      "settings": {
+        "heading": "Pièces passionnantes et espaces de vie",
+        "corps-text": "We delight in objects with stories, evocative of our shared past, a history preserved in wood, clay, iron or cloth. Traditions restored, embalmed forever in pieces that fill our world. A world beyond this world. Our art is ideas, their beauty is incidental.",
+        "image": "shopify:\/\/shop_images\/Captura_de_Pantalla_2023-03-13_a_las_13.22.17.png"
+      }
+    },
     "cascade-2": {
       "type": "cascade",
+      "disabled": true,
       "blocks": {
         "heading-0": {
           "type": "heading",
@@ -75,6 +87,7 @@
     },
     "ca8ba098-a668-4135-9ae0-1bfffb6efa98": {
       "type": "cascading-product-list",
+      "disabled": true,
       "settings": {
         "title": "",
         "overlay_heading": false,
@@ -102,11 +115,111 @@
         "remove_top_padding": false,
         "remove_bottom_padding": false
       }
+    },
+    "7ca91813-87b2-4f3a-b675-303ae0142d72": {
+      "type": "cascade",
+      "blocks": {
+        "template--19155430277447__7ca91813-87b2-4f3a-b675-303ae0142d72-1687516182b52c07a2-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Garance09_0549-min.jpg",
+            "url": "",
+            "block_width": "half"
+          }
+        },
+        "template--19155430277447__7ca91813-87b2-4f3a-b675-303ae0142d72-1687516182b52c07a2-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/17.png",
+            "url": "",
+            "block_width": "half"
+          }
+        },
+        "template--19155430277447__7ca91813-87b2-4f3a-b675-303ae0142d72-1687516182b52c07a2-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/19_1.png",
+            "url": "",
+            "block_width": "half"
+          }
+        },
+        "template--19155430277447__7ca91813-87b2-4f3a-b675-303ae0142d72-1687516182b52c07a2-3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BISA01_1489_1.png",
+            "url": "",
+            "block_width": "half"
+          }
+        },
+        "template--19155430277447__7ca91813-87b2-4f3a-b675-303ae0142d72-1687516182b52c07a2-4": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "url": "",
+            "block_width": "half"
+          }
+        },
+        "template--19155430277447__7ca91813-87b2-4f3a-b675-303ae0142d72-1687516182b52c07a2-5": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "url": "",
+            "block_width": "half"
+          }
+        },
+        "template--19155430277447__7ca91813-87b2-4f3a-b675-303ae0142d72-1687516182b52c07a2-6": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "url": "",
+            "block_width": "half"
+          }
+        },
+        "template--19155430277447__7ca91813-87b2-4f3a-b675-303ae0142d72-1687516182b52c07a2-7": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "url": "",
+            "block_width": "half"
+          }
+        }
+      },
+      "block_order": [
+        "template--19155430277447__7ca91813-87b2-4f3a-b675-303ae0142d72-1687516182b52c07a2-0",
+        "template--19155430277447__7ca91813-87b2-4f3a-b675-303ae0142d72-1687516182b52c07a2-1",
+        "template--19155430277447__7ca91813-87b2-4f3a-b675-303ae0142d72-1687516182b52c07a2-2",
+        "template--19155430277447__7ca91813-87b2-4f3a-b675-303ae0142d72-1687516182b52c07a2-3",
+        "template--19155430277447__7ca91813-87b2-4f3a-b675-303ae0142d72-1687516182b52c07a2-4",
+        "template--19155430277447__7ca91813-87b2-4f3a-b675-303ae0142d72-1687516182b52c07a2-5",
+        "template--19155430277447__7ca91813-87b2-4f3a-b675-303ae0142d72-1687516182b52c07a2-6",
+        "template--19155430277447__7ca91813-87b2-4f3a-b675-303ae0142d72-1687516182b52c07a2-7"
+      ],
+      "custom_css": [
+        "img {margin: 0 auto;}",
+        ".gap-x-grid-gutter {column-gap: 0;}"
+      ],
+      "settings": {
+        "title": "",
+        "overlay_heading": false,
+        "desktop_layout": "two_columns",
+        "first_block_position": "left",
+        "enable_cascade_on_mobile": true,
+        "hide_margin": false,
+        "spacing": "global",
+        "variance": "none",
+        "sequence": 1,
+        "color_scheme": "primary",
+        "disable_color_transition": false,
+        "remove_top_padding": false,
+        "remove_bottom_padding": false
+      }
     }
   },
   "order": [
     "60f4183d-2cc5-493e-8d36-921410e8b3fe",
+    "71fc69a8-0281-4c3e-b5c7-924d8a22935e",
     "cascade-2",
-    "ca8ba098-a668-4135-9ae0-1bfffb6efa98"
+    "ca8ba098-a668-4135-9ae0-1bfffb6efa98",
+    "7ca91813-87b2-4f3a-b675-303ae0142d72"
   ]
 }
