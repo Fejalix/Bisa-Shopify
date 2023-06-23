@@ -102,11 +102,101 @@
         "remove_top_padding": false,
         "remove_bottom_padding": false
       }
+    },
+    "23b100fc-4ede-4d6f-a1cc-c1754db88d85": {
+      "type": "cascade",
+      "blocks": {
+        "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Garance09_0549-min.jpg",
+            "url": "shopify:\/\/products\/ceramic",
+            "block_width": "half"
+          }
+        },
+        "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/21.png",
+            "url": "",
+            "block_width": "half"
+          }
+        },
+        "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-2": {
+          "type": "image",
+          "settings": {
+            "url": "",
+            "block_width": "half"
+          }
+        },
+        "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/10_1.png",
+            "url": "",
+            "block_width": "half"
+          }
+        },
+        "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-4": {
+          "type": "image",
+          "settings": {
+            "url": "",
+            "block_width": "half"
+          }
+        },
+        "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-5": {
+          "type": "image",
+          "settings": {
+            "url": "",
+            "block_width": "half"
+          }
+        },
+        "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-6": {
+          "type": "image",
+          "settings": {
+            "url": "",
+            "block_width": "half"
+          }
+        },
+        "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-7": {
+          "type": "image",
+          "settings": {
+            "url": "",
+            "block_width": "half"
+          }
+        }
+      },
+      "block_order": [
+        "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-0",
+        "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-1",
+        "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-2",
+        "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-3",
+        "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-4",
+        "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-5",
+        "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-6",
+        "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-7"
+      ],
+      "settings": {
+        "title": "",
+        "overlay_heading": false,
+        "desktop_layout": "two_columns",
+        "first_block_position": "left",
+        "enable_cascade_on_mobile": true,
+        "hide_margin": false,
+        "spacing": "global",
+        "variance": "global",
+        "sequence": 1,
+        "color_scheme": "primary",
+        "disable_color_transition": false,
+        "remove_top_padding": false,
+        "remove_bottom_padding": false
+      }
     }
   },
   "order": [
     "60f4183d-2cc5-493e-8d36-921410e8b3fe",
     "cascade-2",
-    "ca8ba098-a668-4135-9ae0-1bfffb6efa98"
+    "ca8ba098-a668-4135-9ae0-1bfffb6efa98",
+    "23b100fc-4ede-4d6f-a1cc-c1754db88d85"
   ]
 }
