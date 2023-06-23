@@ -21,8 +21,17 @@
         "text_color": "color_scheme"
       }
     },
+    "bac3df25-c4df-4bdd-a66c-feaa3ad03f5d": {
+      "type": "artist-banner",
+      "settings": {
+        "heading": "Pièces passionnantes et espaces de vie",
+        "corps-text": "We delight in objects with stories, evocative of our shared past, a history preserved in wood, clay, iron or cloth. Traditions restored, embalmed forever in pieces that fill our world. A world beyond this world. Our art is ideas, their beauty is incidental.",
+        "image": "shopify:\/\/shop_images\/Captura_de_Pantalla_2023-03-13_a_las_13.22.17.png"
+      }
+    },
     "cascade-2": {
       "type": "cascade",
+      "disabled": true,
       "blocks": {
         "heading-0": {
           "type": "heading",
@@ -205,6 +214,7 @@
   },
   "order": [
     "60f4183d-2cc5-493e-8d36-921410e8b3fe",
+    "bac3df25-c4df-4bdd-a66c-feaa3ad03f5d",
     "cascade-2",
     "ca8ba098-a668-4135-9ae0-1bfffb6efa98",
     "23b100fc-4ede-4d6f-a1cc-c1754db88d85"
