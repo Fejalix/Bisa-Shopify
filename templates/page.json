@@ -7,9 +7,62 @@
         "layout": "default",
         "color_scheme": "primary"
       }
+    },
+    "ca65d7f3-61cb-44a1-b7ef-3507092ee45c": {
+      "type": "cascade",
+      "blocks": {
+        "077767b8-6172-45df-8ad9-5041764161fe": {
+          "type": "heading_with_text",
+          "settings": {
+            "heading": "Heading or impact text goes here.",
+            "rich_text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+            "text_align": "text-left",
+            "cta_url": "",
+            "cta_text": "Shop now",
+            "block_width": "half"
+          }
+        },
+        "template--19155367952711__ca65d7f3-61cb-44a1-b7ef-3507092ee45c-1687784759967b1fe0-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Captura_de_Pantalla_2023-03-13_a_las_16.54.25.png",
+            "url": "",
+            "block_width": "half"
+          }
+        },
+        "template--19155367952711__ca65d7f3-61cb-44a1-b7ef-3507092ee45c-1687784759967b1fe0-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/000002.jpg",
+            "url": "",
+            "block_width": "half"
+          }
+        }
+      },
+      "block_order": [
+        "077767b8-6172-45df-8ad9-5041764161fe",
+        "template--19155367952711__ca65d7f3-61cb-44a1-b7ef-3507092ee45c-1687784759967b1fe0-1",
+        "template--19155367952711__ca65d7f3-61cb-44a1-b7ef-3507092ee45c-1687784759967b1fe0-2"
+      ],
+      "settings": {
+        "title": "",
+        "overlay_heading": false,
+        "desktop_layout": "two_columns",
+        "first_block_position": "left",
+        "enable_cascade_on_mobile": true,
+        "hide_margin": false,
+        "spacing": "global",
+        "variance": "global",
+        "sequence": 1,
+        "color_scheme": "primary",
+        "disable_color_transition": false,
+        "remove_top_padding": false,
+        "remove_bottom_padding": false
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "ca65d7f3-61cb-44a1-b7ef-3507092ee45c"
   ]
 }
