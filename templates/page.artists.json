@@ -11,11 +11,7 @@
     "fbb31b25-181a-4090-9ef9-163f75b844e5": {
       "type": "collection-artist-list",
       "settings": {
-        "collection": "",
-        "title": "Collections",
-        "oneontitle": "Découvrez nos",
-        "linktext": "Toutes les sneakers",
-        "linkurl": ""
+        "collection": "all"
       }
     }
   },
