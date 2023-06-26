@@ -10,7 +10,7 @@
   }
 
   .ab-right,
-  .ab-left {
+ {
     width: 50%;
   }
 
@@ -24,6 +24,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+  .container-img{
+    background-color: pink;
+    max-height: 906px ;
+    max-width: 685px;
   }
 
 
@@ -46,7 +51,9 @@
 
       </div>
       <div class="ab-left">
+        <div class="container-img">
         <img src="{{ collection.image | img_url: 'master' }}" alt="{{ collection.title }}">
+        </div>
       </div>
     </div>
   {% else %}
@@ -57,7 +64,10 @@
 
       </div>
       <div class="ab-left">
-        <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ collection.settings.title }}">
+        <div class="container-img">
+          <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ collection.settings.title }}">
+        </div>
+
       </div>
     </div>
   {% endif %}
