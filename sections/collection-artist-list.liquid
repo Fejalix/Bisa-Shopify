@@ -59,7 +59,7 @@
   <div class="max-site-width px2 lg--up--px3 lg:px-10">
     <div class="card-grid-container">
       {% for collection in collections %}
-        {% if collection.title != "All" or collection.title != "Tous" %}
+        {% if collection.title != "All" %}
           <div class="card-artist-collection">
             <a href="{{ collection.url }}">
               <div class="card-artist-collection__image">
