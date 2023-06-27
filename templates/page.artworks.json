@@ -12,7 +12,7 @@
       "type": "cascading-collection",
       "settings": {
         "title": "Our Works",
-        "overlay_heading": true,
+        "overlay_heading": false,
         "collection": "all",
         "max_products": 12,
         "feature_full_width_products": false,
