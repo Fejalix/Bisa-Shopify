@@ -21,8 +21,8 @@
           "type": "collapsible_tabs",
           "settings": {
             "section_area": "form",
-            "heading_1": "Dimensions",
-            "content_1": "<p>{{ product.metafields.custom.dimensions | metafield_tag }}<\/p>",
+            "heading_1": "Production",
+            "content_1": "<p>{{ product.metafields.custom.production | metafield_tag }}<\/p>",
             "page_1": "",
             "icon_1": "none",
             "enable_2": true,
@@ -30,9 +30,9 @@
             "content_2": "<p>{{ product.metafields.custom.material | metafield_tag }}<\/p>",
             "page_2": "",
             "icon_2": "none",
-            "enable_3": false,
-            "heading_3": "Collapsible tab",
-            "content_3": "",
+            "enable_3": true,
+            "heading_3": "Dimensions",
+            "content_3": "<p>{{ product.metafields.custom.dimensions | metafield_tag }}<\/p>",
             "page_3": "",
             "icon_3": "none"
           }
