@@ -11,7 +11,7 @@
     "21c0b3fb-6843-43b4-a8b7-e048763425f8": {
       "type": "cascading-collection",
       "settings": {
-        "title": "Our Works",
+        "title": "",
         "overlay_heading": false,
         "collection": "all",
         "max_products": 12,
