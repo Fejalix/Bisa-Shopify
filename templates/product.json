@@ -69,6 +69,13 @@
             "enable_payment_button": true,
             "show_pickup_availability": true
           }
+        },
+        "b1b7632c-3a85-4c8b-93a0-2bb51d1f3189": {
+          "type": "rich_text",
+          "settings": {
+            "section_area": "cascade",
+            "content": "<p><a href=\"\/collections\/marta-jurado-chagnaud\" title=\"Marta Jurado Chagnaud\">{{ product.vendor }}<\/a><\/p>"
+          }
         }
       },
       "block_order": [
@@ -79,7 +86,8 @@
         "price",
         "variant_picker",
         "quantity_selector",
-        "buy_buttons"
+        "buy_buttons",
+        "b1b7632c-3a85-4c8b-93a0-2bb51d1f3189"
       ],
       "custom_css": [
 
