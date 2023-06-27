@@ -28,7 +28,7 @@
             class="rte"
             x-data="ThemeUtil_RTE"
           >
-            {{ page.content }}
+            {{ page.content | replace: '<meta charset="utf-8">', '' }}
           </div>
         </div>
       </div>
