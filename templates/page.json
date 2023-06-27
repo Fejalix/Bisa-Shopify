@@ -45,7 +45,7 @@
         "template--19155367952711__ca65d7f3-61cb-44a1-b7ef-3507092ee45c-1687784759967b1fe0-2"
       ],
       "custom_css": [
-        ".mt-5 {margin-bottom: 50px;}"
+        ".mt-5 {margin-bottom: 50px; text-align:justify;}"
       ],
       "settings": {
         "title": "",
