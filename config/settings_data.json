@@ -108,9 +108,9 @@
         ],
         "settings": {
           "logo": "shopify:\/\/shop_images\/LOGO_BISA_1.png",
-          "show_payment_icons": true,
-          "show_locale_selector": true,
-          "show_country_selector": true,
+          "show_payment_icons": false,
+          "show_locale_selector": false,
+          "show_country_selector": false,
           "color_scheme": "primary",
           "disable_color_transition": false
         }
