@@ -23,6 +23,7 @@
 
 <section class="{% unless section.settings.remove_top_padding %}pt-section{% endunless %} {% unless section.settings.remove_bottom_padding %}pb-section{% endunless %} text-scheme-text bg-scheme-background {% if section.settings.disable_color_transition %}disable-section-color-transition disable-section-color-transition-source{% endif %}" data-color-scheme="{{ section_color }}">
   <div class="max-w-site mx-auto px-5 lg:px-10">
+    {{ page.title | strip }}
     <div class="relative">
       {% if section.settings.title != blank %}
         {%- render 'cascade-heading', title: section.settings.title, overlay_heading: section.settings.overlay_heading -%}
