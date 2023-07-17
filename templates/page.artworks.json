@@ -14,7 +14,7 @@
         "title": "",
         "overlay_heading": false,
         "collection": "all",
-        "max_products": 12,
+        "max_products": 100,
         "feature_full_width_products": false,
         "desktop_layout": "two_columns",
         "first_product_position": "left",
