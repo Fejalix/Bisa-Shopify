@@ -58,6 +58,7 @@
 <section class="collection-list ">
   <div class="max-site-width px2 lg--up--px3 lg:px-10">
       test
+  {{ page.title | strip }}
     <div class="card-grid-container">
       {% for collection in collections %}
         {% if collection.title != "All" %}
