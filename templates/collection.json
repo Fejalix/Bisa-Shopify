@@ -22,7 +22,7 @@
     "main": {
       "type": "main-collection",
       "settings": {
-        "max_products": 4,
+        "max_products": 24,
         "enable_filtering": true,
         "desktop_filter_layout": "sidebar",
         "expand_filters": false,
