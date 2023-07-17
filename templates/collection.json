@@ -35,7 +35,7 @@
         "desktop_layout": "two_columns",
         "first_product_position": "left",
         "enable_cascade_on_mobile": true,
-        "spacing": "global",
+        "spacing": "medium",
         "variance": "global",
         "sequence": 1,
         "color_scheme": "primary"
