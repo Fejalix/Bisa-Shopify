@@ -24,7 +24,7 @@
       "settings": {
         "max_products": 24,
         "enable_filtering": true,
-        "desktop_filter_layout": "drawer",
+        "desktop_filter_layout": "sidebar",
         "expand_filters": false,
         "show_filter_count": true,
         "enable_color_swatch_filters": false,
