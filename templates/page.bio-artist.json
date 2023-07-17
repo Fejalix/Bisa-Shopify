@@ -2,70 +2,21 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "layout": "centered",
         "color_scheme": "primary"
       }
     },
-    "ca65d7f3-61cb-44a1-b7ef-3507092ee45c": {
-      "type": "cascade",
-      "disabled": true,
-      "blocks": {
-        "077767b8-6172-45df-8ad9-5041764161fe": {
-          "type": "heading_with_text",
-          "settings": {
-            "heading": "Heading or impact text goes here.",
-            "rich_text": "<p>Bisa Studio breaks linear thinking and embraces boundless possibilities. <\/p><p>As a Maison d'édition and Creative Studio, we present captivating pieces that create living spaces. Our aim is to go beyond the ordinary by sharing stories, soulful creations, and diverse visions. Through intentional collaboration, we transcend singular forms, fostering a synergistic community. <\/p><p>Bisa is a project rooted in freedom, creativity, and the desire to share techniques, culture, and meaningful stories. Our journey began in childhood, fueling a passion to learn, improve, and collaborate with admired creatives. <\/p><p>Each of our pieces radiates inner beauty and carries a meaningful message. We encourage the use of our poetic creations, as they embody curiosity and the power to transcend appearances. Our objects hold stories that evoke our shared past, preserving traditions and filling our world with extraordinary pieces. <\/p><p>Our work is both inspirational and educative, embracing unconventional ways of creative expression. We continuously explore creativity, valuing the significance of colors, textures, and lighting. Nature inspires us with its harmonious perfection, and we strive to learn, care for, and interpret it. <\/p><p>Sharing our knowledge and expertise brings us joy, as we embark on an experimental and limitless artistic journey. <\/p><p>While we hold a philosophy and a clear vision, we believe in sharing them with others, fostering synergy and embracing different perspectives. Our approach is dynamic and ever-evolving, driven by the belief that there are no limits to what we can achieve.<\/p>",
-            "text_align": "text-left",
-            "cta_url": "",
-            "cta_text": "Shop now",
-            "block_width": "half"
-          }
-        },
-        "template--19155367952711__ca65d7f3-61cb-44a1-b7ef-3507092ee45c-1687784759967b1fe0-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Captura_de_Pantalla_2023-03-13_a_las_16.54.25.png",
-            "url": "",
-            "block_width": "half"
-          }
-        },
-        "template--19155367952711__ca65d7f3-61cb-44a1-b7ef-3507092ee45c-1687784759967b1fe0-2": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/000002.jpg",
-            "url": "",
-            "block_width": "half"
-          }
-        }
-      },
-      "block_order": [
-        "077767b8-6172-45df-8ad9-5041764161fe",
-        "template--19155367952711__ca65d7f3-61cb-44a1-b7ef-3507092ee45c-1687784759967b1fe0-1",
-        "template--19155367952711__ca65d7f3-61cb-44a1-b7ef-3507092ee45c-1687784759967b1fe0-2"
-      ],
-      "custom_css": [
-        ".mt-5 {margin-bottom: 50px; text-align: justify;}"
-      ],
+    "995341f1-6fc3-4b25-8db4-9f421fa99abd": {
+      "type": "collection-artist-list",
       "settings": {
-        "title": "",
-        "overlay_heading": false,
-        "desktop_layout": "two_columns",
-        "first_block_position": "left",
-        "enable_cascade_on_mobile": true,
-        "hide_margin": false,
-        "spacing": "global",
-        "variance": "global",
-        "sequence": 1,
-        "color_scheme": "primary",
-        "disable_color_transition": false,
-        "remove_top_padding": false,
-        "remove_bottom_padding": false
+        "collection": "all"
       }
     }
   },
   "order": [
     "main",
-    "ca65d7f3-61cb-44a1-b7ef-3507092ee45c"
+    "995341f1-6fc3-4b25-8db4-9f421fa99abd"
   ]
 }
