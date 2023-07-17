@@ -43,6 +43,7 @@
     },
     "0aa114a1-cffc-4426-a1e9-9d31dba7e2d5": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured collection",
         "collection": "{{ collection }}",
