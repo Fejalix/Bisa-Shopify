@@ -9,6 +9,9 @@
   .text-heading-perso{
     font-size: 30px;
   }
+  .marginleft{
+    margin-left:20px
+  }
   .card-grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -60,7 +63,7 @@
 
 <section class="collection-list ">
   <div class="max-site-width px2 lg--up--px3 lg:px-10">
-   <div class="{{ title_class }} mb-10 md:mb-0">
+   <div class="{{ title_class }} mb-10 md:mb-0 marginleft">
           <h1 class="font-heading text-heading-perso mb-5 break-word">
             {{ page.title | strip }}
           </h1>
