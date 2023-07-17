@@ -2,7 +2,6 @@
   "sections": {
     "c2849f21-6559-4138-92f2-2d47c9b0a013": {
       "type": "artist-banner",
-      "disabled": true,
       "settings": {
         "heading": "Heading",
         "corps-text": "Text"
@@ -22,17 +21,17 @@
     "main": {
       "type": "main-collection",
       "settings": {
-        "max_products": 24,
+        "max_products": 4,
         "enable_filtering": true,
         "desktop_filter_layout": "sidebar",
-        "expand_filters": true,
+        "expand_filters": false,
         "show_filter_count": true,
         "enable_color_swatch_filters": false,
         "enable_sorting": false,
         "linklist": "",
         "desktop_menu_layout": "sidebar",
         "feature_full_width_products": false,
-        "desktop_layout": "single_column",
+        "desktop_layout": "two_columns",
         "first_product_position": "left",
         "enable_cascade_on_mobile": true,
         "spacing": "global",
