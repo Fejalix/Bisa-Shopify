@@ -21,6 +21,10 @@
     },
     "main": {
       "type": "main-collection",
+      "custom_css": [
+        ".custom-checkbox__input {margin-top: 5px;}",
+        ".cursor-pointer {align-items: start !important;}"
+      ],
       "settings": {
         "max_products": 24,
         "enable_filtering": true,
