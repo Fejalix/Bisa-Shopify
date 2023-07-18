@@ -3,7 +3,7 @@
     "main": {
       "type": "main-page-contact",
       "custom_css": [
-
+        ".rte {padding-right: 50px;}"
       ],
       "settings": {
         "layout": "default",
