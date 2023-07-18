@@ -3,10 +3,10 @@
     "main": {
       "type": "main-page-contact",
       "custom_css": [
-        ".max-w-sm {margin-top: 20px !important; margin: 0 auto;}"
+
       ],
       "settings": {
-        "layout": "centered",
+        "layout": "default",
         "color_scheme": "primary"
       }
     }
