@@ -144,8 +144,17 @@
             "block_width": "half"
           }
         },
+        "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-5": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Garance05_0285_7c0e7fa2-e071-43bf-8d93-fe015487f1c1.jpg",
+            "url": "shopify:\/\/products\/gfp-daybed",
+            "block_width": "half"
+          }
+        },
         "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-2": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Garance02_0067.jpg",
             "url": "shopify:\/\/products\/gfp-armchair",
@@ -157,14 +166,6 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/BISA01_1722.jpg",
             "url": "shopify:\/\/collections\/marta-jurado-chagnaud",
-            "block_width": "half"
-          }
-        },
-        "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-5": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "url": "",
             "block_width": "half"
           }
         },
@@ -189,9 +190,9 @@
         "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-4",
         "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-0",
         "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-1",
+        "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-5",
         "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-2",
         "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-3",
-        "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-5",
         "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-6",
         "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-7"
       ],
