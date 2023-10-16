@@ -171,9 +171,9 @@
         },
         "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-6": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "url": "",
+            "image": "shopify:\/\/shop_images\/Garance04_0228.jpg",
+            "url": "shopify:\/\/products\/braided-shelves-l-etagere-tressee",
             "block_width": "half"
           }
         },
