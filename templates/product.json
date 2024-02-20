@@ -60,12 +60,14 @@
         },
         "quantity_selector": {
           "type": "quantity_selector",
+          "disabled": true,
           "settings": {
             "hide_label": false
           }
         },
         "buy_buttons": {
           "type": "buy_buttons",
+          "disabled": true,
           "settings": {
             "enable_payment_button": true,
             "show_pickup_availability": true
