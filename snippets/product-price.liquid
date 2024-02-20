@@ -1,4 +1,4 @@
-<p class="{% if on_sale %} text-scheme-accent{% endif %} m-0 text-theme-basic">
+<p style="color:red !important;" class="{% if on_sale %} text-scheme-accent{% endif %} m-0 text-theme-basic">
   {% if sold_out %}
     <span class="text-scheme-meta {% if on_sale %} mr-2 {% endif %}">
       {{- 'products.product.sold_out' | t -}}
