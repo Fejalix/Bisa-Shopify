@@ -287,7 +287,8 @@
         endcase
       endfor
     %}
-                          {% for block in buttons %}
+        {% for block in buttons %}
+          
           <div class="mt-8" {% unless section.settings.text_color == 'color_scheme' %}data-color-scheme="{{ section.settings.text_color | replace: 'text-', '' | append: '-text' }}"{% endunless %}>
             <a
               class="theme-button {% if block.settings.style == 'solid' %}theme-button--solid theme-button--solid-overlay{% endif %} break-word"
