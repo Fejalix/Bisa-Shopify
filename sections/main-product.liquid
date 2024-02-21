@@ -289,7 +289,7 @@
     %}
         {% for block in buttons %}
           {% if block.settings.moreInfo %}
-            <div> 
+            <div class="container-moreinfo"> 
               {{ block.settings.moreInfo }}
             </div>
           {% endif %}
@@ -586,7 +586,13 @@
     <script src="{{ 'zoom.js' | asset_url }}" type="module"></script>
   {% endunless %}
 {% endif %}
-
+<style>
+.container-moreinfo{
+  font-weight: 900;
+    font-size: 16px;
+}
+  
+</style>
 {% schema %}
 {
   "name": "Product",
