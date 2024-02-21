@@ -1,4 +1,5 @@
 {% liquid
+  assign buttons = section.blocks | where: 'type', 'button'
   assign section_color = section.settings.color_scheme
   assign desktop_layout = section.settings.desktop_layout
 
