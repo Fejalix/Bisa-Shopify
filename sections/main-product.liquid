@@ -288,6 +288,9 @@
       endfor
     %}
         {% for block in buttons %}
+          {% if block.settings.moreInfo %}
+            <h1>Test</h1>
+          {% endif %}
           
           <div class="mt-8" {% unless section.settings.text_color == 'color_scheme' %}data-color-scheme="{{ section.settings.text_color | replace: 'text-', '' | append: '-text' }}"{% endunless %}>
             <a
