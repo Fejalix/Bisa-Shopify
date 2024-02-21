@@ -2,19 +2,6 @@
   "sections": {
     "60f4183d-2cc5-493e-8d36-921410e8b3fe": {
       "type": "image-with-text-overlay",
-      "blocks": {
-        "button_EYeAgg": {
-          "type": "button",
-          "settings": {
-            "link": "",
-            "text": "Shop now",
-            "style": "solid"
-          }
-        }
-      },
-      "block_order": [
-        "button_EYeAgg"
-      ],
       "custom_css": [
 
       ],
