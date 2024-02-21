@@ -291,7 +291,7 @@
           {% if block.settings.moreInfo %}
             <div> 
               {{ block.settings.moreInfo }}
-            <div>
+            </div>
           {% endif %}
           
           <div class="mt-3" {% unless section.settings.text_color == 'color_scheme' %}data-color-scheme="{{ section.settings.text_color | replace: 'text-', '' | append: '-text' }}"{% endunless %}>
