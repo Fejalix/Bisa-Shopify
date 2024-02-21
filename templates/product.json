@@ -77,8 +77,9 @@
           "type": "button",
           "settings": {
             "link": "shopify:\/\/pages\/contact",
-            "text": "Shop now",
-            "style": "solid"
+            "text": "Enquire",
+            "moreInfo": "",
+            "style": "border-only"
           }
         }
       },
