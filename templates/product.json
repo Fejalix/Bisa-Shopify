@@ -72,6 +72,14 @@
             "enable_payment_button": true,
             "show_pickup_availability": true
           }
+        },
+        "button_HKmeP7": {
+          "type": "button",
+          "settings": {
+            "link": "shopify:\/\/pages\/contact",
+            "text": "Shop now",
+            "style": "solid"
+          }
         }
       },
       "block_order": [
@@ -82,7 +90,8 @@
         "price",
         "variant_picker",
         "quantity_selector",
-        "buy_buttons"
+        "buy_buttons",
+        "button_HKmeP7"
       ],
       "custom_css": [
 
