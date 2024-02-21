@@ -289,10 +289,12 @@
     %}
         {% for block in buttons %}
           {% if block.settings.moreInfo %}
-            <h1> {{ block.settings.moreInfo }}</h1>
+            <div> 
+              {{ block.settings.moreInfo }}
+            <div>
           {% endif %}
           
-          <div class="mt-8" {% unless section.settings.text_color == 'color_scheme' %}data-color-scheme="{{ section.settings.text_color | replace: 'text-', '' | append: '-text' }}"{% endunless %}>
+          <div class="mt-3" {% unless section.settings.text_color == 'color_scheme' %}data-color-scheme="{{ section.settings.text_color | replace: 'text-', '' | append: '-text' }}"{% endunless %}>
             <a
               class="theme-button {% if block.settings.style == 'solid' %}theme-button--solid theme-button--solid-overlay{% endif %} break-word"
               href="{{ block.settings.link }}"
