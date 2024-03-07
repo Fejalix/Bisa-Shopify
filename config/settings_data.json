@@ -290,7 +290,7 @@
       "popup": {
         "type": "popup",
         "settings": {
-          "enable": true,
+          "enable": false,
           "delay": 2,
           "frequency": 2,
           "image_position": "left",
