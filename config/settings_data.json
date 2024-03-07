@@ -290,15 +290,15 @@
       "popup": {
         "type": "popup",
         "settings": {
-          "enable": false,
-          "delay": 4,
-          "frequency": 30,
+          "enable": true,
+          "delay": 2,
+          "frequency": 2,
           "image_position": "left",
           "title": "Sign up to our newsletter",
           "text": "<p>Receive special offers and first look at new products.<\/p>",
-          "call_to_action": "newsletter",
-          "cta_url": "",
-          "cta_text": "Shop Now"
+          "call_to_action": "button",
+          "cta_url": "https:\/\/drive.google.com\/file\/d\/1y-qAvz9Y_1fJw1vOfZ5dUUf1KfPmBcOl\/view?usp=drive_link",
+          "cta_text": "Save The Dat"
         }
       },
       "sidebar": {
