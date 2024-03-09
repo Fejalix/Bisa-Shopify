@@ -347,7 +347,7 @@
       "cookies-banner": {
         "type": "cookies-banner",
         "settings": {
-          "enabled": false
+          "enabled": true
         }
       }
     },
