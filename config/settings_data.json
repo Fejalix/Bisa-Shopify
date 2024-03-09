@@ -89,6 +89,13 @@
       "footer": {
         "type": "footer",
         "blocks": {
+          "tagline_64NYWA": {
+            "type": "tagline",
+            "settings": {
+              "text": "",
+              "show_social_icons": true
+            }
+          },
           "1535918568841": {
             "type": "menus",
             "settings": {
@@ -104,6 +111,7 @@
           }
         },
         "block_order": [
+          "tagline_64NYWA",
           "1535918568841",
           "1535970800735"
         ],
