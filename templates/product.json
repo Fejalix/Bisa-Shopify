@@ -65,14 +65,6 @@
             "hide_label": false
           }
         },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "disabled": true,
-          "settings": {
-            "enable_payment_button": true,
-            "show_pickup_availability": true
-          }
-        },
         "button_HKmeP7": {
           "type": "button",
           "settings": {
@@ -91,7 +83,6 @@
         "price",
         "variant_picker",
         "quantity_selector",
-        "buy_buttons",
         "button_HKmeP7"
       ],
       "custom_css": [
