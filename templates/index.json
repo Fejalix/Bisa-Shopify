@@ -155,7 +155,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Analog-17.jpg",
-            "url": "shopify:\/\/products\/cavera",
+            "url": "shopify:\/\/pages\/about",
             "block_width": "half"
           }
         },
