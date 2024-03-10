@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="{{ 'payment-terms.css' | asset_url }}">
-<div class="{{ block_base_classes }} my-3 product-block-buy-buttons" {{ block.shopify_attributes }} data-disable-variance>
+<div id="disable-buy-btn" class="{{ block_base_classes }} my-3 product-block-buy-buttons" {{ block.shopify_attributes }} data-disable-variance>
   {% if product != blank %}
     {% form 'product',
       product,
