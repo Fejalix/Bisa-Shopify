@@ -131,7 +131,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Analog-161.jpg",
-            "url": "shopify:\/\/collections\/marta-jurado-chagnaud",
+            "url": "shopify:\/\/products\/poeme-geometrique-001",
             "block_width": "half"
           }
         },
@@ -155,7 +155,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/BISA01_1710_1e.jpg",
-            "url": "shopify:\/\/collections\/marta-jurado-chagnaud",
+            "url": "shopify:\/\/products\/poeme-geometric-ii",
             "block_width": "half"
           }
         }
