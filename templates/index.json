@@ -151,6 +151,14 @@
             "block_width": "half"
           }
         },
+        "image_b9y6TP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Analog-17.jpg",
+            "url": "shopify:\/\/products\/cavera",
+            "block_width": "half"
+          }
+        },
         "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-3": {
           "type": "image",
           "settings": {
@@ -165,6 +173,7 @@
         "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-4",
         "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-1",
         "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-5",
+        "image_b9y6TP",
         "template--19155367854407__23b100fc-4ede-4d6f-a1cc-c1754db88d85-1687515273e877424d-3"
       ],
       "custom_css": [
