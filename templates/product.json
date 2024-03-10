@@ -94,7 +94,7 @@
         "buy_buttons_7Gnafq"
       ],
       "custom_css": [
-        "div#disable-buy-btn {display: none;}"
+
       ],
       "settings": {
         "desktop_layout": "full_width",
