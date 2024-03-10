@@ -63,6 +63,9 @@
     "sections": {
       "header": {
         "type": "header",
+        "custom_css": [
+          "button.shopify-payment-button__button {display: none !important;}"
+        ],
         "settings": {
           "logo": "shopify:\/\/shop_images\/LOGO_BISA_1.png",
           "logo_max_width": 7,
