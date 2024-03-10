@@ -73,6 +73,13 @@
             "moreInfo": "Price Upon Request",
             "style": "border-only"
           }
+        },
+        "buy_buttons_7Gnafq": {
+          "type": "buy_buttons",
+          "settings": {
+            "enable_payment_button": true,
+            "show_pickup_availability": true
+          }
         }
       },
       "block_order": [
@@ -83,7 +90,8 @@
         "price",
         "variant_picker",
         "quantity_selector",
-        "button_HKmeP7"
+        "button_HKmeP7",
+        "buy_buttons_7Gnafq"
       ],
       "custom_css": [
 
