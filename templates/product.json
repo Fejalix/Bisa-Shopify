@@ -77,8 +77,8 @@
           "type": "button",
           "settings": {
             "link": "shopify:\/\/pages\/contact",
-            "text": "Enquire",
-            "moreInfo": "",
+            "text": "Inquire",
+            "moreInfo": "Price Upon Request",
             "style": "border-only"
           }
         }
