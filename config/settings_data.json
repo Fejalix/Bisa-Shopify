@@ -302,9 +302,10 @@
           "enable": true,
           "delay": 2,
           "frequency": 2,
+          "image": "shopify:\/\/shop_images\/STD-general.png",
           "image_position": "left",
-          "title": "Bisa Studi Event",
-          "text": "<h2><strong>ATELIER LARDEUR<\/strong><\/h2><p>69 Rue du Cherche-Midi, 75006<\/p><h2><strong>EXHIBITION<\/strong><\/h2><p>Open Wednesday 20th and Thursay 21st all day from <strong>9:00 <\/strong>to<strong> 19:00 <\/strong>and Friday 22nd from <strong>9:00<\/strong> to <strong>12:00 <\/strong><\/p><h2><strong>RSVP<\/strong><\/h2><p><a href=\"mailto:Joanne@perriergiroire.com\" target=\"_blank\" title=\"mailto:Joanne@perriergiroire.com\">Joanne@perriergiroire.com<\/a><\/p>",
+          "title": "Bisa Studio Event",
+          "text": "<h2><strong>ATELIER LARDEUR<\/strong><\/h2><p>79 Rue du Cherche-Midi, 75006<\/p><h2><strong>EXHIBITION<\/strong><\/h2><p>Open Wednesday 20th and Thursay 21st all day from <strong>9:00 <\/strong>to<strong> 19:00 <\/strong>and Friday 22nd from <strong>9:00<\/strong> to <strong>12:00 <\/strong><\/p><h2><strong>RSVP<\/strong><\/h2><p><a href=\"mailto:Joanne@perriergiroire.com\" target=\"_blank\" title=\"mailto:Joanne@perriergiroire.com\">Joanne@perriergiroire.com<\/a><\/p>",
           "call_to_action": "button",
           "cta_url": "https:\/\/drive.google.com\/file\/d\/1y-qAvz9Y_1fJw1vOfZ5dUUf1KfPmBcOl\/view?usp=drive_link",
           "cta_text": "Save The Dat"
