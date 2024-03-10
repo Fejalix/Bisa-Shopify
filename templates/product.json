@@ -107,7 +107,7 @@
         "spacing": "small",
         "variance": "high",
         "sequence": 1,
-        "enable_image_zoom": false,
+        "enable_image_zoom": true,
         "enable_video_looping": false,
         "autoplay_videos_on_desktop": true,
         "color_scheme": "primary"
