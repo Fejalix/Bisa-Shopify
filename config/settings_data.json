@@ -306,7 +306,7 @@
         ],
         "settings": {
           "enable": true,
-          "delay": 0,
+          "delay": 1,
           "frequency": 2,
           "image": "shopify:\/\/shop_images\/STD-general_3.jpg",
           "image_position": "left",
