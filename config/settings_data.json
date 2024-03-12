@@ -307,7 +307,7 @@
         "settings": {
           "enable": true,
           "delay": 1,
-          "frequency": 0,
+          "frequency": 1,
           "image": "shopify:\/\/shop_images\/STD-general_3.jpg",
           "image_position": "left",
           "title": "Bisa Studio Event",
